@@ -30,11 +30,16 @@
 </div>
 <div style="text-align: center;"><h2>=</h2></div>
 <div class="toggle-container">
-  {% for i in range(8) %}
+  <label class="toggle-switch" >
+    <input type="checkbox" disabled id="displaytoggle0">
+    <span class="slider"></span>
+    <h3 class="num">-</h3>
+  </label>
+  {% for i in range(1, 8) %}
   <label class="toggle-switch" >
     <input type="checkbox" disabled id="displaytoggle{{i}}">
     <span class="slider"></span>
-    <h3 class="num">{{2**(8-i)}}</h3>
+    <h3 class="num">{{2**(7-i)}}</h3>
   </label>
   {% endfor %}
 </div>

@@ -20,4 +20,4 @@ def update_toggle():
     return eight_bit_full_adder(0, nums[0], nums[1])
     
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, port=5001)
