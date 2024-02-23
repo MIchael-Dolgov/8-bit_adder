@@ -62,3 +62,52 @@ input:checked + .slider:before {
   -ms-transform: translateX(20px);
   transform: translateX(20px);
 }
+
+.btn-checkbox {
+  display: none;
+}
+
+.btn {
+  align-items: center;
+  width: 55px;
+  height: 20px;
+  background-color: #125fb2;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  border-color: #4c4848;
+  border-radius: 7px;
+  border-width: 7px;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.btn::after {
+  content: '+';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+}
+
+.btn-checkbox:checked + .btn::after {
+  content: '-';
+}
+
+.btn:active::before {
+  opacity: 1;
+  border-radius: 10px;
+}

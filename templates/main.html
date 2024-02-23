@@ -18,7 +18,12 @@
   </label>
   {% endfor %}
 </div>
-<div style="text-align: center;"><h2>+</h2></div>
+
+<div style="text-align: center;">
+<input type="checkbox" id="btn-checkbox" class="btn-checkbox">
+<label for="btn-checkbox" class="btn"></label>
+</div>
+
 <div class="toggle-container">
   {% for i in range(8) | reverse%}
   <label class="toggle-switch">
@@ -34,7 +39,7 @@
   <label class="toggle-switch" >
     <input type="checkbox" disabled id="displaytoggle{{i}}">
     <span class="slider"></span>
-    <h3 class="num">{{2**(8-i)}}</h3>
+    <h3 class="num" id="num{{i}}">{{2**(7-i)}}</h3>
   </label>
   {% endfor %}
 </div>
